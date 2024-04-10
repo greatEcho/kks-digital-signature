@@ -1,0 +1,15 @@
+# Ignore all
+*
+# Unignore all with extensions
+!*.*
+# Unignore all dirs
+!*/
+
+# Unignore Makefile in any directory
+!Makefile
+
+# Ignore vscode dir
+.vscode
+
+# Ignore a.out
+a.out
