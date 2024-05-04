@@ -1,0 +1,13 @@
+kks.c:57:5:main	3627760	dynamic,bounded
+kks.c:109:6:print_matrice	48	static
+kks.c:117:6:print_matrice_pretty	64	static
+kks.c:127:10:tobytes	16	static
+kks.c:138:6:initialize_J	48	static
+kks.c:152:10:generate_random_up_to_N	48	static
+kks.c:174:6:product_cell	16	static
+kks.c:205:6:matrix_multiply	144	dynamic,bounded
+kks.c:236:6:compute_element	16	static
+kks.c:254:6:compute_element_via_J	96	static
+kks.c:278:6:random_matrix	48	static
+kks.c:288:6:initialize_H_J	16	static
+kks.c:302:6:choose_J_columns_H	16	static

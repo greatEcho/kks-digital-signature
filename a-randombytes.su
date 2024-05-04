@@ -1,0 +1,2 @@
+randombytes.c:17:6:randombytes	48	static
+randombytes.c:50:15:random_byte	32	static

@@ -6,6 +6,7 @@ This code was taken from the SPHINCS reference implementation and is public doma
 #include <unistd.h>
 
 #include "randombytes.h"
+#define byte unsigned char
 
 static int fd = -1;
 
@@ -45,3 +46,22 @@ void randombytes(unsigned char *x, unsigned long long xlen)
         xlen -= i;
     }
 }
+
+unsigned char random_byte(void)
+{
+    byte result;
+    if (fd == -1) {
+        // try open /dev/urandom until we can
+        for (;;) {
+            fd = open("/dev/urandom", O_RDONLY);
+            if (fd != -1) {
+                break;
+            }
+            sleep(1);
+        }
+    }
+
+    read(fd, &result, 1);
+    return result;
+}
+
